@@ -26,6 +26,7 @@ def calcularDiasTranscurridos():
     from datetime import datetime
     fecha_actual = datetime.now()
     fecha_evaluar = datetime.strptime( input("Ingrese una fecha (ej. 1900-12-31): "), '%Y-%m-%d')
+    #prueba unittest
     dias = fecha_actual - fecha_evaluar
     print("Dias transcurridos: " + str(dias))
 
