@@ -18,7 +18,6 @@
 
 def calcularAreaCirculo():
     r = int( input("Ingrese el radio: ") )
-    #print( type(r) )
     area = 3.1416 * r ** 2
     print("El área del círculo es: " + str(area))
 
@@ -26,7 +25,6 @@ def calcularDiasTranscurridos():
     from datetime import datetime
     fecha_actual = datetime.now()
     fecha_evaluar = datetime.strptime( input("Ingrese una fecha (ej. 1900-12-31): "), '%Y-%m-%d')
-    #prueba unittest
     dias = fecha_actual - fecha_evaluar
     print("Dias transcurridos: " + str(dias))
 
@@ -51,10 +49,7 @@ def ordenarDiccionarioEtiqueta():
     }
     print(calificaciones)
 
-    #etiquetas = sorted(calificaciones)
-    #print(etiquetas)
     etiquetas = sorted(calificaciones.items())
-    #print(etiquetas)
     
     calificaciones_ord = {}
     for x in etiquetas:
@@ -75,9 +70,7 @@ def ordenarDiccionarioValor():
     lista = []
     for x in calificaciones:
         lista.append( (calificaciones[x], x) )
-    #print(lista)
     lista.sort()
-    #print(lista)
 
     calificaciones_ord = {}
     for x in lista:
@@ -89,19 +82,6 @@ print("1. Calcular el área de un círculo")
 print("2. Calcular los días transcurridos de una fecha")
 print("3. Ordenar un diccionario de datos")
 opc = int( input("Opción: ") )
-#print( type(opc) )
-
-#if opc==1:
-#    calcularAreaCirculo()
-#else:
-#    if opc==2:
-#        calcularDiasTranscurridos()
-#    else:
-#        if opc==3:
-#            ordenarDiccionarioEtiqueta()
-#            ordenarDiccionarioValor()
-#        else:
-#            print("Opción incorrecta.")
 
 if opc==1:
     calcularAreaCirculo()
